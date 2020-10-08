@@ -1,0 +1,68 @@
+body {
+    background-color: #e9ecec;
+    width: 100%
+}
+
+.photo-display {
+    display: grid;
+    grid-template-rows: 640px;
+    grid-template-columns: auto auto auto;
+    max-width: 1920px;
+}
+
+.photo-container {
+  position: relative;
+  width: 640px;
+  height: 640px;
+  top: 0;
+  left: 0;
+}
+
+.frame {
+  position: relative;
+  width: 640px;
+  height: 640px;
+  top: 0;
+  left: 0;
+}
+
+.photo {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  left: 120px;
+  top: 170px;
+}
+
+.name {
+    position: absolute;
+    width: 200px;
+    height: 20px;
+    left: 220px;
+    bottom: 90px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #eff1f1;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.3), 0 0px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    position: absolute;
+    width: 400px;
+    height: 40px;
+    left: 120px;
+    bottom: 40px;
+    text-align: center;
+    background-color: #eff1f1;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.3), 0 0px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    position: absolute;
+    left: 640px;
+    top: 40px;
+    text-align: center;
+    font-size: 40px;
+    width: 640px;
+    height: 40px;
+}
