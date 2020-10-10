@@ -4,74 +4,15 @@
         <meta charset="utf-8">
         <title>This is document title</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-   </head>
+        <script type="text/javascript" src="{{ url_for('static', filename='render.js') }}"> </script>
+    </head>
+    <body>
+        <div class="title" align="middle">
+            My Gallery
+        </div>
+        <script>
+            renderDisplay("{{url_for('static', filename='images/frame_horizontal.png')}}");
+        </script>
 
-   <body>
-       <div class="title" align="middle">
-           My Gallery
-       </div>
-       <div class="photo-display">
-           <div class="photo-container">
-               <img class="photo" src="{{url_for('static', filename='images/test_photos/test_1.jpg')}}" align="middle" />
-               <img class="frame" src="{{url_for('static', filename='images/frame_horizontal.png')}}" align="middle" />
-               <div class="name">
-                   Picture 1
-               </div>
-               <div class="description">
-                   Hello, this is a short description of the image, quite nice eh?
-               </div>
-           </div>
-           <div class="photo-container">
-               <img class="photo" src="{{url_for('static', filename='images/test_photos/test_2.jpg')}}" align="middle" />
-               <img class="frame" src="{{url_for('static', filename='images/frame_horizontal.png')}}" align="middle" />
-               <div class="name">
-                   Picture 2
-               </div>
-               <div class="description">
-                   Hello, this is a short description of the image, quite nice eh?
-               </div>
-           </div>
-           <div class="photo-container">
-               <img class="photo" src="{{url_for('static', filename='images/test_photos/test_3.jpg')}}" align="middle" />
-               <img class="frame" src="{{url_for('static', filename='images/frame_horizontal.png')}}" align="middle" />
-               <div class="name">
-                   Picture 3
-               </div>
-               <div class="description">
-                   Hello, this is a short description of the image, quite nice eh?
-               </div>
-           </div>
-           <div class="photo-container">
-               <img class="photo" src="{{url_for('static', filename='images/test_photos/test_3.jpg')}}" align="middle" />
-               <img class="frame" src="{{url_for('static', filename='images/frame_horizontal.png')}}" align="middle" />
-               <div class="name">
-                   Picture 4
-               </div>
-               <div class="description">
-                   Hello, this is a short description of the image, quite nice eh?
-               </div>
-           </div>
-           <div class="photo-container">
-               <img class="photo" src="{{url_for('static', filename='images/test_photos/test_1.jpg')}}" align="middle" />
-               <img class="frame" src="{{url_for('static', filename='images/frame_horizontal.png')}}" align="middle" />
-               <div class="name">
-                   Picture 5
-               </div>
-               <div class="description">
-                   Hello, this is a short description of the image, quite nice eh?
-               </div>
-           </div>
-           <div class="photo-container">
-               <img class="photo" src="{{url_for('static', filename='images/test_photos/test_2.jpg')}}" align="middle" />
-               <img class="frame" src="{{url_for('static', filename='images/frame_horizontal.png')}}" align="middle" />
-               <div class="name">
-                   Picture 6
-               </div>
-               <div class="description">
-                   Hello, this is a short description of the image, quite nice eh?
-               </div>
-           </div>
-       </div>
-   </body>
-
+    </body>
 </html>
