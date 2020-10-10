@@ -8,8 +8,10 @@ Photos can be uploaded and viewed in the web page.
 Clicking on a photo will give you a bigger view of it.
 
 ## TODO
-* Show all photos in database, not limited to always showing first 9
-* Transfer name and description from database
+* Create photo manager i.e. upload/ delete, swap order
+* Support collections
+* Add transitions between medium size photos
+* General clean up code
 
 ## Usage
 

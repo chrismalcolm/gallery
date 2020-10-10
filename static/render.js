@@ -1,6 +1,6 @@
-function renderDisplay(h_frame) {
+function renderDisplay(h_frame, metadata) {
     var text = `<div class="photo-display">`;
-    for (id = 1; id <= 9; id++) {
+    for (id = 1; id <= metadata.length; id++) {
         text +=
         `<div class="photo-container">
             <a href="/photo/medium?id=${id}">
@@ -10,10 +10,10 @@ function renderDisplay(h_frame) {
             </div>
             </a>
             <div class="name">
-                Picture ${id}
+                ${metadata[id-1].name}
             </div>
             <div class="description">
-                Hello, this is a short description of the image, quite nice eh?
+                ${metadata[id-1].description}
             </div>
         </div>`
     }

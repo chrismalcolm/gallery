@@ -50,10 +50,20 @@ for entry in results[0]:
         "medium_data": bytes(entry[4])
     }
 
+def javascript_metadata():
+    js_array = "["
+    for id, data in metadata.items():
+        if id != 1:
+            js_array += ","
+        js_array += "{name:'%s',description:'%s'}" % (data["name"], data["description"])
+    js_array += "]"
+    return js_array
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template('index.html')
+    document = render_template('index.html')
+    document = document.replace("METADATA", javascript_metadata())
+    return document
 
 @app.route('/photo/name', methods=['GET'])
 def name_photo_data():
